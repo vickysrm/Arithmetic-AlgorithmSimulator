@@ -1,0 +1,63 @@
+.algorithm-output {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+  overflow-x: auto;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 245, 160, 0.5) rgba(255, 255, 255, 0.1);
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: 'Roboto Mono', monospace;
+  min-width: 800px;
+}
+
+.header {
+  background: rgba(0, 245, 160, 0.1);
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: #00f5a0;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid rgba(0, 245, 160, 0.2);
+}
+
+.cell {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.binary {
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 0.1em;
+  color: #00d9f5;
+}
+
+.shiftRow {
+  background: rgba(255, 255, 255, 0.02);
+  font-style: italic;
+}
+
+.row:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.title {
+  color: #00f5a0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
