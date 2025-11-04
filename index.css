@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +15,77 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Custom utility classes */
+@layer components {
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent;
+  }
+
+  .button-base {
+    @apply px-4 py-2 rounded-lg transition-all duration-300 font-medium;
+  }
+
+  .button-primary {
+    @apply button-base bg-gradient-to-r from-primary to-primary-dark text-gray-900 
+           hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5;
+  }
+
+  .button-secondary {
+    @apply button-base bg-white/10 text-white border border-white/20 
+           hover:bg-white/20 hover:-translate-y-0.5;
+  }
+
+  .input-field {
+    @apply px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white
+           focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20
+           transition-all duration-300;
+  }
+
+  .algo-card {
+    @apply glass-effect p-6 hover:bg-white/10 transition-all duration-300
+           hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10;
+  }
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Custom animations */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-white/5 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 rounded-full hover:bg-primary/70 transition-colors;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-primary/30 text-white;
 }
